@@ -2448,6 +2448,7 @@ import StaticTranspiler._
         }
       case exp: AST.Exp.Ident => val r = transIdent(exp); return r
       case exp: AST.Exp.Binary => val r = transBinary(exp); return r
+      case exp: AST.Exp.BinaryTemporal => halt(s"Infeasible: $exp")
       case exp: AST.Exp.Unary => val r = transUnary(exp); return r
       case exp: AST.Exp.UnaryTemporal => halt(s"Infeasible: $exp")
       case exp: AST.Exp.Select => val r = transSelect(exp); return r
