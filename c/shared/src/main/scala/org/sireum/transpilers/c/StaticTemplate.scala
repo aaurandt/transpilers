@@ -992,7 +992,7 @@ object StaticTemplate {
           |struct $name {
           |  TYPE type;
           |  ${name}SizeT size;
-          |  ${if (isBit) "U8" else elementType} value[Max$name${if (isBit) " / 8 + 1" else ""}];
+          |  ${if (isBit) st"U8" else elementType} value[Max$name${if (isBit) " / 8 + 1" else ""}];
           |};
           |
           |#define DeclNew$name(x) struct $name x = { .type = T$name }"""
